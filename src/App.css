@@ -1,0 +1,795 @@
+html {  
+  scroll-behavior: smooth;  
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}  
+
+body {  
+  position: relative;  
+  z-index: 1;  
+  overflow-x: hidden;  
+}  
+ 
+body::-webkit-scrollbar {  
+  display: none;  
+}  
+
+section, nav, footer {  
+  position: relative;  
+  z-index: 10;  
+}  
+ 
+#particles-js {  
+  position: fixed;  
+  width: 100%;  
+  height: 100%;  
+  background-color: #090E16;  
+  z-index: -1;  
+}  
+
+.Navbar{
+  width: 80%;
+  height: 44px;
+  background-color: #7a4ae20e;
+  margin: 20px auto;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 20px;
+}
+
+.Logo{
+  color: #ffffff;
+  justify-items: start;
+  font-family: "Playball";
+  font-size: 23px;
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+.ListNav{
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+  margin-top: 14px;
+  font-size: 14px;
+  font-family: "Raleway";
+  font-weight: 200;
+}
+
+a{
+  color: #ffffff75;
+  list-style-type: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+.ListNav :hover{
+  color: #7a4ae2;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.ListNav a {  
+  transition: color 0.3s ease, font-weight 0.3s ease;  
+}  
+
+.ListNav a.active {  
+  color: #7a4ae2;  
+  font-weight: bold;  
+}  
+
+
+section {  
+  max-width: 1200px; 
+  margin: 0 auto;
+  /* padding: 50px 20px; /* Padding vertikal dan horizontal */ 
+} 
+
+/* Section Home */  
+#home {  
+  display: flex;  
+  align-items: center;   
+  min-height: 100vh; 
+}  
+
+.TextContainer{
+  margin-left: 50px;
+}
+
+.BoxHello{
+  width: 210px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgba(123, 74, 226, 0.1);
+  color: #7B4AE2;
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+  padding-top: 5px;
+}
+
+.Nama{
+  color: #ffffff;
+  font-family: "Raleway";
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: 15px;
+}
+.TitleSkils{
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Raleway";
+  font-weight: 200;
+  font-size: 14px;
+  margin-top: -20px;
+}
+
+.circle1{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #7B4AE2;
+  background-image: url('/src/me1.jpg');
+  background-size: cover;  
+  background-position: center;
+  border: solid;
+  border-color: rgba(123, 74, 226, 0.5);
+  border-width: 5px;
+  margin-left: 100px;
+}
+
+.BtnCV{
+  background-color: transparent;
+  border: none;
+  border-radius: 16px;
+  width: 190px;
+  height: 50px;
+  font-size: 22px;
+  color: #7B4AE2;
+  font-family: "Raleway";
+  text-align: start;
+}
+
+.BtnWAA{
+  background-color: transparent;
+  border: solid;
+  border-color: rgba(123, 74, 226, 0.5);
+  border-radius: 16px;
+  width: 190px;
+  height: 50px;
+  font-size: 22px;
+  color: #7B4AE2;
+}
+
+/* Section 2 About */
+#about {  
+  display: flex;
+  align-items: center; 
+  min-height: 100vh; /* Tinggi full viewport */ 
+  gap: 85px; 
+}
+
+.circle2{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-image: url('/src/me.jpg');
+  background-size: cover;  
+  background-position: center;
+}
+
+.TextAboutContainer{
+  width: 70%;
+  height: 50%;
+}
+
+.BoxAbout{
+  background-color: rgba(123, 74, 226, 0.1);
+  width: 150px;
+  height: 32px;
+  border-radius: 16px;
+  color: #7B4AE2;
+  font-family: "Raleway";
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 8px;
+}
+
+.hello{
+  font-size: 38px;
+  color: #ffffff;
+  font-family: "Raleway";
+  font-weight: bold;
+}
+
+p{
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Raleway";
+  font-weight: 200;
+  margin-top: -5px;
+}
+
+/* Section 3 My Project */
+#project {  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center;   
+  min-height: 100vh;   
+  font-family: "Raleway";      
+  margin: 0 auto;   
+  padding: 0 20px;   
+  overflow-x: hidden; /* Mencegah horizontal overflow */  
+} 
+
+.TitleProject{
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: left;
+}
+
+.ProjectIntro{
+  text-align: left;
+  margin-top: -20px;
+}
+
+.ProjectContainer {  
+  width: 100%; /* Ubah dari 90% ke 100% */  
+  display: flex;  
+  overflow-x: auto; /* Aktifkan scroll horizontal */  
+  gap: 40px;  
+  text-align: left;  
+  margin-top: 10px;  
+  padding: 20px 0; /* Tambahkan padding */  
+  scroll-snap-type: x mandatory; /* Tambahkan scroll snap */  
+  scroll-behavior: smooth; /* Efek scroll halus */  
+  -webkit-overflow-scrolling: touch; /* Untuk pengalaman scroll di iOS */  
+}
+
+/* Tambahkan scrollbar styling */  
+.ProjectContainer::-webkit-scrollbar {  
+  height: 8px; /* Tinggi scrollbar horizontal */  
+} 
+
+.ProjectBox{
+  background-color: transparent;
+  width: 350px;
+  height: 280px;
+  border-radius: 16px;
+  border: solid;
+  border-color: rgba(123, 74, 226, 0.5);
+  border-width: 1px;
+}
+
+.ProjectBox:hover{
+  background-color: rgba(123, 74, 226, 0.1);
+  border-color:transparent; 
+  transition: 0.3s;
+}
+
+.ProjectImage1{
+  width: 90%;
+  height: 65%;
+  border-radius: 16px;
+  background-color: #7B4AE2;
+  margin: 15px auto;
+  background-image: url('/public/SmartVenturi.png');
+  background-size: cover;  
+  background-position: center;
+}
+.ProjectImage2{
+  width: 90%;
+  height: 65%;
+  border-radius: 16px;
+  background-color: #7B4AE2;
+  margin: 15px auto;
+  background-image: url('/public/project2.jpg');
+  background-size: cover;  
+  background-position: center;
+}
+.ProjectImage3{
+  width: 90%;
+  height: 65%;
+  border-radius: 16px;
+  background-color: #7B4AE2;
+  margin: 15px auto;
+  background-image: url('/public/project3.jpg');
+  background-size: cover;  
+  /* background-position: center; */
+}
+
+.ProjectName{
+  font-size: 15px;
+  color: #ffffff;
+  margin-left: 16px;
+}
+.JobAndBtn{
+  display: flex;
+  justify-content: space-between;
+}
+
+.JobProject{
+  font-size: 13px;
+  margin-left: 16px;
+}
+
+.BtnPreview{
+  width: 65px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  margin: -20px 16px 0 0;
+}
+
+/* Section 4 Skills */
+#skills {  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center;  
+  min-height: 100vh;   
+  font-family: "Raleway";      
+  margin: 0 auto;   
+  padding: 0 20px; 
+}
+
+.BoxSkills{
+  width: 180px;
+  height: 30px;
+  border-radius: 16px;
+  background-color: rgba(123, 74, 226, 0.1);
+  color: #7B4AE2;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.TitleSkills{
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+
+.IconContainer{
+  width: 60%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  color: rgba(218, 218, 218, 1);
+  margin-top: 15px;
+}
+
+
+.tech-icon {  
+  font-size: 50px; 
+  width: 50px;
+  height: 50px;
+}  
+  
+.tech-icon svg{  
+  width: 50px;  
+  height: 50px;
+}  
+
+@keyframes float {  
+  0% {  
+    transform: translateY(0px);  
+  }  
+  50% {  
+    transform: translateY(-10px);  
+  }  
+  100% {  
+    transform: translateY(0px);  
+  }  
+}  
+
+.tech-icon {  
+  animation: float 2s ease-in-out infinite;  
+} 
+
+/* Content 5 - Contact */
+#contact {  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center;  
+  min-height: 100vh;   
+  font-family: "Raleway";      
+  margin: 0 auto;   
+  padding: 0 20px; 
+}
+
+.ContactRedesignContainer {  
+  padding: 4rem 2rem;  
+}  
+
+.ContactHeaderSection {  
+  text-align: center;  
+  margin-bottom: 3rem;  
+}  
+
+.BoxContact {  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  gap: 10px;  
+  margin-bottom: 1rem;  
+  width: 160px;
+  height: 30px;
+  border-radius: 18px;
+  background-color: rgba(123, 74, 226, 0.1);
+  color: #7B4AE2;
+  font-size: 16px;
+  font-weight: bold;  
+  margin: 0 auto;
+}   
+
+.TitleContact {  
+  font-size: 2.5rem;  
+  color: #ffffff;  
+  margin-bottom: 1rem;  
+}  
+
+.ContactSubtitle {  
+  max-width: 800px;  
+  margin: 0 auto;  
+  color: #6b7280;  
+}  
+
+.ContactContentWrapper {  
+  display: flex;  
+  gap: 2rem;  
+  max-width: 1200px;  
+  margin: 0 auto;  
+}  
+
+.ContactMethodsContainer {  
+  flex: 1;  
+  background-color: white;  
+  padding: 2rem;  
+  border-radius: 12px;  
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);  
+}  
+
+.ContactMethodBox {  
+  display: flex;  
+  align-items: center;  
+  margin-bottom: 2rem;  
+  background-color: #f0f9ff;  
+  padding: 1rem;  
+  border-radius: 8px;  
+}  
+
+.ContactMethodIcon {  
+  background-color: #e6f2ff;  
+  color: #3b82f6;  
+  padding: 1rem;  
+  border-radius: 50%;  
+  margin-right: 1rem;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+}  
+
+.ContactMethodIcon i {  
+  font-size: 2rem;  
+}  
+
+.ContactMethodDetails h3 {  
+  margin-bottom: 0.5rem;  
+  color: #1f2937;  
+}  
+
+.ContactMethodButton {  
+  background: none;  
+  border: none;  
+  color: #3b82f6;  
+  padding: 0;  
+  cursor: pointer;  
+  text-decoration: underline;  
+}  
+
+.EmailContainer {  
+  display: flex;  
+  align-items: center;  
+  gap: 10px;  
+}  
+
+.EmailContainer i {  
+  cursor: pointer;  
+  color: #6b7280;  
+  transition: color 0.3s;  
+}  
+
+.EmailContainer i:hover {  
+  color: #3b82f6;  
+}  
+
+.MessageFormContainer {  
+  flex: 1;  
+  background-color: white;  
+  padding: 2rem;  
+  border-radius: 12px;  
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);  
+}  
+
+.MessageFormContainer h2 {  
+  margin-bottom: 1.5rem;  
+  color: #1f2937;  
+}  
+
+.MessageForm {  
+  display: flex;  
+  flex-direction: column;  
+  gap: 1rem;  
+}  
+
+.FormGroup {  
+  display: flex;  
+  flex-direction: column;  
+}  
+
+.FormGroup label {  
+  margin-bottom: 0.5rem;  
+  color: #4b5563;  
+}  
+
+.FormInput, .FormTextarea {  
+  padding: 0.75rem;  
+  border: 1px solid #d1d5db;  
+  border-radius: 6px;  
+  outline: none;  
+  transition: border-color 0.3s;  
+}  
+
+.FormInput:focus, .FormTextarea:focus {  
+  border-color: #3b82f6;  
+}  
+
+.SubmitButton {  
+  background-color: #3b82f6;  
+  color: white;  
+  border: none;  
+  padding: 0.75rem;  
+  border-radius: 6px;  
+  cursor: pointer;  
+  transition: background-color 0.3s;  
+}  
+
+.SubmitButton:hover {  
+  background-color: #2563eb;  
+}  
+
+.ContactFootnote {  
+  text-align: center;  
+  max-width: 800px;  
+  margin: 2rem auto 0;  
+  color: #6b7280;  
+}  
+
+.Footer {  
+  background-color: #1a1a1a;  
+  color: #ffffff;  
+  padding: 4rem 6rem;  
+}  
+
+.FooterContent {  
+  display: flex;  
+  justify-content: space-between;  
+  gap: 2rem;  
+}  
+
+.FooterSection {  
+  flex: 1;  
+}  
+
+.FooterSection h3,   
+.FooterSection h4 {  
+  margin-bottom: 1rem;  
+  color: #ffffff;  
+}  
+
+.FooterSection ul {  
+  list-style: none;  
+  padding: 0;  
+}  
+
+.FooterSection ul a {  
+  color: #cccccc;  
+  text-decoration: none;  
+  display: block;  
+  margin-bottom: 0.5rem;  
+  transition: color 0.3s ease;  
+}  
+
+.FooterSection ul a:hover {  
+  color: #ffffff;  
+}  
+
+.SocialLinks {  
+  display: flex;  
+  gap: 1rem;  
+}  
+
+.SocialLinks a {  
+  color: #cccccc;  
+  font-size: 1.5rem;  
+  transition: color 0.3s ease;  
+}  
+
+.SocialLinks a:hover {  
+  color: #ffffff;  
+}  
+
+.FooterBottom {  
+  margin-top: 2rem;  
+  text-align: center;  
+  border-top: 1px solid #333;  
+  padding-top: 1rem;  
+}  
+
+
+  
+/* Responsive Breakpoints */  
+/* Small devices (landscape phones, 576px and up) */  
+@media screen and (max-width: 576px) {  
+  .Navbar {  
+    width: 95%;  
+    height: auto;  
+    flex-direction: column;  
+    padding: 10px;  
+  }  
+
+  .Logo {  
+    text-align: center;  
+    margin-bottom: 10px;  
+  }  
+
+  .ListNav {  
+    flex-direction: column;  
+    align-items: center;  
+    gap: 10px;  
+    margin-top: 0;  
+  }  
+
+  #home, #about, #project, #skills, #contact {  
+    flex-direction: column;  
+    text-align: center;  
+    padding: 20px 15px;  
+  }  
+
+  .TextContainer, .TextAboutContainer {  
+    margin-left: 0;  
+    width: 100%;  
+    text-align: center;  
+  }  
+
+  .circle1, .circle2 {  
+    margin: 20px auto;  
+  }  
+
+  .ProjectContainer {  
+    flex-direction: column;  
+    overflow-x: visible;  
+  }  
+
+  .ProjectBox {  
+    width: 100%;  
+    margin-bottom: 20px;  
+  }  
+
+  .IconContainer {  
+    width: 100%;  
+    flex-wrap: wrap;  
+    justify-content: center;  
+    gap: 20px;  
+  }  
+
+  .tech-icon {  
+    font-size: 40px;  
+    width: 40px;  
+    height: 40px;  
+  }  
+
+  .ContactContentWrapper {  
+    flex-direction: column;  
+  }  
+}  
+
+/* Medium devices (tablets, 768px and up) */  
+@media screen and (min-width: 577px) and (max-width: 992px) {  
+  .Navbar {  
+    width: 90%;  
+  }  
+
+  section {  
+    padding: 0 30px;  
+  }  
+
+  #home, #about {  
+    flex-direction: column;  
+    text-align: center;  
+  }  
+
+  .TextContainer, .TextAboutContainer {  
+    margin-left: 0;  
+    width: 100%;  
+    text-align: center;  
+  }  
+
+  .circle1, .circle2 {  
+    margin: 20px auto;  
+  }  
+
+  .ProjectContainer {  
+    overflow-x: auto;  
+  }  
+
+  .IconContainer {  
+    width: 80%;  
+  }  
+}  
+
+/* Large devices (desktops, 993px and up) */  
+@media screen and (min-width: 993px) {  
+  /* Existing styles remain the same */  
+  section {  
+    max-width: 1200px;  
+    margin: 0 auto;  
+  }  
+}  
+
+/* Responsive Typography */  
+@media screen and (max-width: 576px) {  
+  .Nama {  
+    font-size: 28px;  
+  }  
+
+  .TitleSkils {  
+    font-size: 12px;  
+  }  
+
+  .hello {  
+    font-size: 30px;  
+  }  
+
+  p {  
+    font-size: 14px;  
+  }  
+
+  .TitleProject, .TitleSkills, .TitleContact {  
+    font-size: 24px;  
+  }  
+}  
+
+/* Media Query Khusus Footer */  
+@media screen and (max-width: 768px) {  
+  .Footer {  
+    padding: 2rem 1rem; /* Kurangi padding di mobile */  
+  }  
+
+  .FooterContent {  
+    flex-direction: column; /* Tata letak vertikal di mobile */  
+    text-align: center;  
+  }  
+
+  .FooterSection {  
+    margin-bottom: 1.5rem; /* Tambah jarak antar bagian */  
+  }  
+
+  .SocialLinks {  
+    justify-content: center; /* Pusatkan ikon sosial */  
+  }  
+
+  .FooterBottom {  
+    font-size: 0.875rem; /* Kecilkan teks */  
+  }  
+}  
