@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react';
-import Particles from 'particles.js';
+import React, { useEffect, useState } from 'react';
+import 'particles.js';
 
-const ParticleBackground = () => {
+const ParticlesBackground = () => {
+  const [particlesLoaded, setParticlesLoaded] = useState(false);
+
   useEffect(() => {
-    // Pastikan particles.js dimuat sebelum menggunakannya
-    if (window.particlesJS) {
+    // Pastikan window dan particlesJS tersedia
+    if (window.particlesJS && !particlesLoaded) {
       window.particlesJS('particles-js', {
         particles: {
           number: {
@@ -15,16 +17,20 @@ const ParticleBackground = () => {
             }
           },
           color: {
-            value: '#7B4AE2'  // Warna ungu sesuai tema Anda
+            value: ['#2196f3', '#e91e63', '#9c27b0']
           },
           shape: {
             type: 'circle',
+            stroke: {
+              width: 0,
+              color: '#7B4AE2'
+            }
           },
           opacity: {
             value: 0.5,
             random: false,
             anim: {
-              enable: false,
+              enable: true,
               speed: 1,
               opacity_min: 0.1,
               sync: false
@@ -43,7 +49,7 @@ const ParticleBackground = () => {
           line_linked: {
             enable: true,
             distance: 150,
-            color: '#7B4AE2',
+            color: '#ffffff',
             opacity: 0.4,
             width: 1
           },
@@ -76,34 +82,51 @@ const ParticleBackground = () => {
             resize: true
           },
           modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1
+              }
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3
+            },
             repulse: {
               distance: 100,
               duration: 0.4
             },
             push: {
               particles_nb: 4
+            },
+            remove: {
+              particles_nb: 2
             }
           }
         },
         retina_detect: true
       });
+      
+      setParticlesLoaded(true);
     }
-  }, []);
+  }, [particlesLoaded]);
 
   return (
     <div 
       id="particles-js" 
       style={{
         position: 'fixed',
-        width: '100%',
-        height: '100%',
         top: 0,
         left: 0,
-        zIndex: -1,
-        backgroundColor: '#090E16'
-      }}
+        width: '100%',
+        height: '100%',
+        zIndex: -1
+      }} 
     />
   );
 };
 
-export default ParticleBackground;
+export default ParticlesBackground;

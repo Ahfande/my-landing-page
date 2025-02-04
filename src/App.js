@@ -1,12 +1,13 @@
-import React, { useState } from "react";  
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
-import ParticleBackground from "./components/ParticleBackground";
-import Navbar from "./components/Navbar";
-import useSmoothScroll from "./hooks/useSmoothScroll";
-import TypingAnimation from "./components/TypingAnimation";
-import Swal from "sweetalert2";
+import React, { useState } from 'react';  
+import { ToastContainer, toast } from "react-toastify";  
+import "react-toastify/dist/ReactToastify.css";  
+import "./App.css";  
+import Navbar from "./components/Navbar";  
+import useSmoothScroll from "./hooks/useSmoothScroll";  
+import TypingAnimation from "./components/TypingAnimation";  
+import Swal from "sweetalert2";  
+import ParticlesBackground from './components/ParticlesBackground';
+
 
 function App() {
   const cvUrl = "/CV-AhfanNaofal.pdf";
@@ -91,40 +92,38 @@ function App() {
     });
   };
 
-
   // Contact
-  // Tambahkan state untuk form kontak  
-  const [contactForm, setContactForm] = useState({  
-    name: '',  
-    email: '',  
-    message: ''  
-  });  
+  // Tambahkan state untuk form kontak
+  const [contactForm, setContactForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  // Fungsi untuk mengubah input form kontak  
-  const handleContactFormChange = (e) => {  
-    const { name, value } = e.target;  
-    setContactForm(prevState => ({  
-      ...prevState,  
-      [name]: value  
-    }));  
-  };  
+  // Fungsi untuk mengubah input form kontak
+  const handleContactFormChange = (e) => {
+    const { name, value } = e.target;
+    setContactForm((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
-  // Fungsi untuk mengirim pesan  
-  const handleSendMessage = async (e) => {  
-    e.preventDefault();  
-  
-    // Buka email client default  
-    const mailtoLink = `mailto:ahfande17@gmail.com?subject=Pesan dari ${contactForm.name}&body=${contactForm.message}`;  
-    window.location.href = mailtoLink;  
-  
-    toast.info("Will open the email client...");  
-  };  
+  // Fungsi untuk mengirim pesan
+  const handleSendMessage = async (e) => {
+    e.preventDefault();
 
+    // Buka email client default
+    const mailtoLink = `mailto:ahfande17@gmail.com?subject=Pesan dari ${contactForm.name}&body=${contactForm.message}`;
+    window.location.href = mailtoLink;
+
+    toast.info("Will open the email client...");
+  };
 
   useSmoothScroll();
   return (
-    <>
-      <div style={{ position: "relative" }}>
+    <>  
+        <ParticlesBackground />
         {/* Tambahkan ToastContainer */}
         <ToastContainer
           position="top-right"
@@ -138,7 +137,6 @@ function App() {
           pauseOnHover
         />
 
-        <ParticleBackground />
         <Navbar />
         <section>
           {/* Content 1 - Home */}
@@ -158,11 +156,11 @@ function App() {
                 Fullstack IoT Developer | Front-End Developer
               </h4>
               <button className="BtnCV" onClick={handleDownloadCV}>
-                Download CV <i class="fa-solid fa-download"></i>
+                Download CV <i className="fa-solid fa-download"></i>
               </button>
               <button className="BtnWAA" onClick={handleWhatsAppTalk}>
                 {" "}
-                <i class="fa-brands fa-whatsapp"></i> Let's talk
+                <i className="fa-brands fa-whatsapp"></i> Let's talk
               </button>
             </div>
             <div className="circle1"></div>
@@ -175,7 +173,7 @@ function App() {
           <div className="TextAboutContainer">
             <div className="BoxAbout">
               {" "}
-              <i class="fa-solid fa-person"></i> About Me
+              <i className="fa-solid fa-person"></i> About Me
             </div>
             <h2 className="hello">Hello...</h2>
             <p>
@@ -244,9 +242,7 @@ function App() {
                   <p className="JobProject">Web App | Backend</p>
                   <button
                     className="BtnPreview"
-                    onClick={() =>
-                      handlePreviewClick("Smart Attendance RFID")
-                    }
+                    onClick={() => handlePreviewClick("Smart Attendance RFID")}
                   >
                     Preview
                   </button>
@@ -262,9 +258,7 @@ function App() {
                   <p className="JobProject">Web App | UI/UX</p>
                   <button
                     className="BtnPreview"
-                    onClick={() =>
-                      handlePreviewClick("Smart Home")
-                    }
+                    onClick={() => handlePreviewClick("Smart Home")}
                   >
                     Preview
                   </button>
@@ -278,21 +272,21 @@ function App() {
         <section id="skills">
           <div className="BoxSkills">
             {" "}
-            <i class="fa-solid fa-laptop-code"></i> Skills · Experience
+            <i className="fa-solid fa-laptop-code"></i> Skills · Experience
           </div>
           <h2 className="TitleSkills">Technology and skills</h2>
           <p>Technology I use every day</p>
           <div className="IconContainer">
-            <i class="tech-icon fa-brands fa-html5"></i>
-            <i class="tech-icon fa-brands fa-css3-alt"></i>
-            <i class="tech-icon fa-brands fa-js"></i>
-            <i class="tech-icon fa-brands fa-node"></i>
-            <i class="tech-icon fa-brands fa-react"></i>
-            <i class="tech-icon fa-brands fa-figma"></i>
-            <i class="tech-icon fa-brands fa-github"></i>
-            <i class="tech-icon fa-brands fa-bootstrap"></i>
+            <i className="tech-icon fa-brands fa-html5"></i>
+            <i className="tech-icon fa-brands fa-css3-alt"></i>
+            <i className="tech-icon fa-brands fa-js"></i>
+            <i className="tech-icon fa-brands fa-node"></i>
+            <i className="tech-icon fa-brands fa-react"></i>
+            <i className="tech-icon fa-brands fa-figma"></i>
+            <i className="tech-icon fa-brands fa-github"></i>
+            <i className="tech-icon fa-brands fa-bootstrap"></i>
             <svg
-              class="tech-icon"
+              className="tech-icon"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 48 48"
               width="48px"
@@ -304,7 +298,7 @@ function App() {
               />
             </svg>
             <svg
-              class="tech-icon"
+              className="tech-icon"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 48 48"
               width="48px"
@@ -381,25 +375,25 @@ function App() {
                   <div className="FormGroup">
                     <label>Name</label>
                     <input
-                       type="text"  
-                       name="name"  
-                       placeholder="Your Name"  
-                       className="FormInput"  
-                       value={contactForm.name}  
-                       onChange={handleContactFormChange}  
-                       required 
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      className="FormInput"
+                      value={contactForm.name}
+                      onChange={handleContactFormChange}
+                      required
                     />
                   </div>
 
                   <div className="FormGroup">
                     <label>Email</label>
                     <input
-                      type="email"  
-                      name="email"  
-                      placeholder="Your Email"  
-                      className="FormInput"  
-                      value={contactForm.email}  
-                      onChange={handleContactFormChange}  
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      className="FormInput"
+                      value={contactForm.email}
+                      onChange={handleContactFormChange}
                       required
                     />
                   </div>
@@ -407,12 +401,12 @@ function App() {
                   <div className="FormGroup">
                     <label>Message</label>
                     <textarea
-                      name="message"  
-                      placeholder="Write your message"  
-                      className="FormTextarea"  
-                      value={contactForm.message}  
-                      onChange={handleContactFormChange}  
-                      required  
+                      name="message"
+                      placeholder="Write your message"
+                      className="FormTextarea"
+                      value={contactForm.message}
+                      onChange={handleContactFormChange}
+                      required
                     ></textarea>
                   </div>
 
@@ -483,7 +477,7 @@ function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="fa-brands fa-instagram"></i>
+                  <i className="fa-brands fa-instagram"></i>
                 </a>
               </div>
             </div>
@@ -493,7 +487,6 @@ function App() {
             <p>&copy; 2025 Ahfan Naofal. All Rights Reserved.</p>
           </div>
         </footer>
-      </div>
     </>
   );
 }
