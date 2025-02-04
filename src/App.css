@@ -22,8 +22,8 @@ section {
   overflow-x: hidden;  
   box-sizing: border-box;  
   padding: 0 20px; /* Tambahkan padding horizontal */  
-}  
-
+}
+  
 body::-webkit-scrollbar {  
   display: none;  
 }  
@@ -98,14 +98,10 @@ section {
 
 /* Section Home */  
 #home {  
-  width: 100%;  
-  max-width: 100%;  
   display: flex;  
-  justify-content: center;  
-  align-items: center;  
-  padding: 0 20px;  
-  box-sizing: border-box;  
-}
+  align-items: center;   
+  min-height: 100vh; 
+}  
 
 .TextContainer{
   margin-left: 50px;
@@ -149,8 +145,7 @@ section {
   border: solid;
   border-color: rgba(123, 74, 226, 0.5);
   border-width: 5px;
-  margin-left: auto;  
-  margin-right: auto; /* Ini akan memusatkan foto */  
+  margin-left: 100px;
 }
 
 .BtnCV{
@@ -251,21 +246,21 @@ p{
 }
 
 .ProjectContainer {  
-  width: 100%; /* Ubah dari 90% ke 100% */  
+  width: 100%;  
   display: flex;  
-  overflow-x: auto; /* Aktifkan scroll horizontal */  
+  overflow-x: auto;   
   gap: 40px;  
   text-align: left;  
   margin-top: 10px;  
-  padding: 20px 0; /* Tambahkan padding */  
-  scroll-snap-type: x mandatory; /* Tambahkan scroll snap */  
-  scroll-behavior: smooth; /* Efek scroll halus */  
-  -webkit-overflow-scrolling: touch; /* Untuk pengalaman scroll di iOS */  
+  padding: 20px 0; 
+  scroll-snap-type: x mandatory;  
+  scroll-behavior: smooth; 
+  -webkit-overflow-scrolling: touch; 
 }
 
-/* Tambahkan scrollbar styling */  
+
 .ProjectContainer::-webkit-scrollbar {  
-  height: 8px; /* Tinggi scrollbar horizontal */  
+  height: 8px; 
 } 
 
 .ProjectBox{
@@ -312,7 +307,7 @@ p{
   margin: 15px auto;
   background-image: url('/public/project3.jpg');
   background-size: cover;  
-  /* background-position: center; */
+
 }
 
 .ProjectName{
@@ -755,8 +750,7 @@ p{
 }  
 
 /* Large devices (desktops, 993px and up) */  
-@media screen and (min-width: 993px) {  
-  /* Existing styles remain the same */  
+@media screen and (min-width: 993px) {   
   section {  
     max-width: 1200px;  
     margin: 0 auto;  
@@ -814,13 +808,13 @@ p{
   .circle1 {  
     margin-left: auto;  
     margin-right: auto;  
-    width: 200px; /* Sesuaikan ukuran di layar kecil */  
-    height: 200px;  
+    width: 220px; /* Sesuaikan ukuran di layar kecil */  
+    height: 220px;  
   }  
   .circle2 {  
     margin-left: auto;  
     margin-right: auto;  
-    width: 200px; /* Sesuaikan ukuran di layar kecil */  
-    height: 200px;  
+    width: 220px; /* Sesuaikan ukuran di layar kecil */  
+    height: 220px;  
   }  
 }
