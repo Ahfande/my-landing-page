@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 import ParticlesBackground from './components/ParticlesBackground';
 
 
+
 function App() {
   const cvUrl = "/CV-AhfanNaofal.pdf";
   const whatsappNumber = "6281546864712";

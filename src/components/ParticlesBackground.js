@@ -1,132 +1,102 @@
-import React, { useEffect, useState } from 'react';
-import 'particles.js';
+import React, { useEffect, useRef } from 'react';
 
-const ParticlesBackground = () => {
-  const [particlesLoaded, setParticlesLoaded] = useState(false);
+const StarParticles = () => {
+  const canvasRef = useRef(null);
 
   useEffect(() => {
-    // Pastikan window dan particlesJS tersedia
-    if (window.particlesJS && !particlesLoaded) {
-      window.particlesJS('particles-js', {
-        particles: {
-          number: {
-            value: 80,
-            density: {
-              enable: true,
-              value_area: 800
-            }
-          },
-          color: {
-            value: ['#2196f3', '#e91e63', '#9c27b0']
-          },
-          shape: {
-            type: 'circle',
-            stroke: {
-              width: 0,
-              color: '#7B4AE2'
-            }
-          },
-          opacity: {
-            value: 0.5,
-            random: false,
-            anim: {
-              enable: true,
-              speed: 1,
-              opacity_min: 0.1,
-              sync: false
-            }
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: {
-              enable: false,
-              speed: 40,
-              size_min: 0.1,
-              sync: false
-            }
-          },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: '#ffffff',
-            opacity: 0.4,
-            width: 1
-          },
-          move: {
-            enable: true,
-            speed: 2,
-            direction: 'none',
-            random: false,
-            straight: false,
-            out_mode: 'out',
-            bounce: false,
-            attract: {
-              enable: false,
-              rotateX: 600,
-              rotateY: 1200
-            }
-          }
-        },
-        interactivity: {
-          detect_on: 'canvas',
-          events: {
-            onhover: {
-              enable: true,
-              mode: 'repulse'
-            },
-            onclick: {
-              enable: true,
-              mode: 'push'
-            },
-            resize: true
-          },
-          modes: {
-            grab: {
-              distance: 400,
-              line_linked: {
-                opacity: 1
-              }
-            },
-            bubble: {
-              distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3
-            },
-            repulse: {
-              distance: 100,
-              duration: 0.4
-            },
-            push: {
-              particles_nb: 4
-            },
-            remove: {
-              particles_nb: 2
-            }
-          }
-        },
-        retina_detect: true
-      });
-      
-      setParticlesLoaded(true);
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    class StarParticle {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = Math.random() * 2;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+        this.opacity = Math.random();
+        this.growDirection = Math.random() > 0.5 ? 1 : -1;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        
+        // Efek berkedip
+        this.opacity += 0.01 * this.growDirection;
+        if (this.opacity > 1 || this.opacity < 0) {
+          this.growDirection *= -1;
+        }
+
+        // Reset jika keluar layar
+        if (this.x < 0 || this.x > canvas.width) this.reset();
+        if (this.y < 0 || this.y > canvas.height) this.reset();
+      }
+
+      draw(ctx) {
+        // Efek bintang berkilau
+        const gradient = ctx.createRadialGradient(
+          this.x, this.y, 0, 
+          this.x, this.y, this.radius
+        );
+        gradient.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
+        gradient.addColorStop(1, `rgba(255, 255, 255, 0)`);
+
+        ctx.beginPath();
+        ctx.fillStyle = gradient;
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
     }
-  }, [particlesLoaded]);
+
+    const particles = Array.from({ length: 100 }, () => new StarParticle());
+
+    function animate() {
+      ctx.fillStyle = 'rgba(0, 0, 30, 0.1)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw(ctx);
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    const resizeHandler = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    window.addEventListener('resize', resizeHandler);
+
+    return () => {
+      window.removeEventListener('resize', resizeHandler);
+    };
+  }, []);
 
   return (
-    <div 
-      id="particles-js" 
+    <canvas 
+      ref={canvasRef} 
       style={{
         position: 'fixed',
         top: 0,
         left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: -1
-      }} 
+        zIndex: -1,
+        pointerEvents: 'none',
+        background: 'linear-gradient(to bottom, #000033, #000066)'
+      }}
     />
   );
 };
 
-export default ParticlesBackground;
+export default StarParticles;
