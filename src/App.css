@@ -1,23 +1,31 @@
-html {  
-  scroll-behavior: smooth;  
-  scrollbar-width: none; 
-  -ms-overflow-style: none;
+html, body {  
+  max-width: 100%;  
+  overflow-x: hidden;  
 }  
 
 body {  
   position: relative;  
-  z-index: 1;  
-  overflow-x: hidden;  
-  background-color: #090E16;  
-}  
- 
-body::-webkit-scrollbar {  
-  display: none;  
+  width: 100%;  
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
 }  
 
-section, nav, footer {  
-  position: relative;  
-  z-index: 10;  
+#root, .App {  
+  width: 100%;  
+  overflow-x: hidden;  
+}  
+
+section {  
+  width: 100%;  
+  max-width: 100%;  
+  overflow-x: hidden;  
+  box-sizing: border-box;  
+  padding: 0 20px; /* Tambahkan padding horizontal */  
+}  
+
+body::-webkit-scrollbar {  
+  display: none;  
 }  
  
 #tsparticles {  
@@ -90,10 +98,14 @@ section {
 
 /* Section Home */  
 #home {  
+  width: 100%;  
+  max-width: 100%;  
   display: flex;  
-  align-items: center;   
-  min-height: 100vh; 
-}  
+  justify-content: center;  
+  align-items: center;  
+  padding: 0 20px;  
+  box-sizing: border-box;  
+}
 
 .TextContainer{
   margin-left: 50px;
@@ -137,7 +149,8 @@ section {
   border: solid;
   border-color: rgba(123, 74, 226, 0.5);
   border-width: 5px;
-  margin-left: 100px;
+  margin-left: auto;  
+  margin-right: auto; /* Ini akan memusatkan foto */  
 }
 
 .BtnCV{
@@ -796,3 +809,18 @@ p{
     font-size: 0.875rem; /* Kecilkan teks */  
   }  
 }  
+
+@media screen and (max-width: 768px) {  
+  .circle1 {  
+    margin-left: auto;  
+    margin-right: auto;  
+    width: 200px; /* Sesuaikan ukuran di layar kecil */  
+    height: 200px;  
+  }  
+  .circle2 {  
+    margin-left: auto;  
+    margin-right: auto;  
+    width: 200px; /* Sesuaikan ukuran di layar kecil */  
+    height: 200px;  
+  }  
+}
