@@ -19,7 +19,7 @@ function App() {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = "Ahfan_Naofal_CV.pdf";
+    link.download = "CV-AhfanNaofal.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -84,13 +84,23 @@ function App() {
 
   // Fungsi untuk menampilkan alert
   const handlePreviewClick = (projectName) => {
-    Swal.fire({
-      icon: "info",
-      title: "Project is Private",
-      text: `Sorry, the "${projectName}" project is still private 🔒`,
-      confirmButtonText: "Understand",
-      confirmButtonColor: "#3085d6",
+    const publicProject = {
+      "Gor Jayabaya": "https://gorjayabaya.web.app",
+      "Desa Sawahan" : "https://sawahan-d1e92.web.app",
+      "UI/UX": "https://drive.google.com/drive/folders/1n_sjF6hybwsbVZEy2NZvALo0oJ964B9F?usp=sharing"
+    };
+    if (publicProject[projectName]){
+      window.open(publicProject[projectName], "_blank");
+    }else{
+      Swal.fire({
+        icon: "info",
+        title: "Project is Private",
+        text: `Sorry, the "${projectName}" project is still private 🔒`,
+        confirmButtonText: "Understand",
+        confirmButtonColor: "#3085d6",
     });
+    }
+    
   };
 
   // Contact
@@ -254,12 +264,44 @@ function App() {
             <div className="ProjectBox">
               <div className="ProjectImage3"></div>
               <div className="ProjectInfo">
-                <h3 className="ProjectName">Smart Home</h3>
+                <h3 className="ProjectName">Gor Jayabaya</h3>
                 <div className="JobAndBtn">
-                  <p className="JobProject">Web App | UI/UX</p>
+                  <p className="JobProject">Website | Fullstack</p>
                   <button
                     className="BtnPreview"
-                    onClick={() => handlePreviewClick("Smart Home")}
+                    onClick={() => handlePreviewClick("Gor Jayabaya")}
+                  >
+                    Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+            {/* project 4 */}
+            <div className="ProjectBox">
+              <div className="ProjectImage4"></div>
+              <div className="ProjectInfo">
+                <h3 className="ProjectName">Desa Sawahan</h3>
+                <div className="JobAndBtn">
+                  <p className="JobProject">Website | Fullstack</p>
+                  <button
+                    className="BtnPreview"
+                    onClick={() => handlePreviewClick("Desa Sawahan")}
+                  >
+                    Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+            {/* project 5 */}
+            <div className="ProjectBox">
+              <div className="ProjectImage5"></div>
+              <div className="ProjectInfo">
+                <h3 className="ProjectName">UI/UX</h3>
+                <div className="JobAndBtn">
+                  <p className="JobProject">Website | UI/UX</p>
+                  <button
+                    className="BtnPreview"
+                    onClick={() => handlePreviewClick("UI/UX")}
                   >
                     Preview
                   </button>

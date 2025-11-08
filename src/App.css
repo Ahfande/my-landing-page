@@ -230,7 +230,7 @@ p{
   font-family: "Raleway";      
   margin: 0 auto;   
   padding: 0 20px;   
-  overflow-x: hidden; /* Mencegah horizontal overflow */  
+  overflow-x: hidden;
 } 
 
 .TitleProject{
@@ -248,6 +248,7 @@ p{
 .ProjectContainer {  
   width: 100%;  
   display: flex;  
+  flex-wrap: wrap;
   overflow-x: auto;   
   gap: 40px;  
   text-align: left;  
@@ -308,6 +309,24 @@ p{
   background-image: url('/public/project3.jpg');
   background-size: cover;  
 
+}
+.ProjectImage4{
+  width: 90%;
+  height: 65%;
+  border-radius: 16px;
+  background-color: #7B4AE2;
+  margin: 15px auto;
+  background-image: url('/public/project4.jpg');
+  background-size: cover;  
+}
+.ProjectImage5{
+  width: 90%;
+  height: 65%;
+  border-radius: 16px;
+  background-color: #7B4AE2;
+  margin: 15px auto;
+  background-image: url('/public/project5.jpg');
+  background-size: cover;  
 }
 
 .ProjectName{
