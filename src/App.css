@@ -183,7 +183,7 @@ section {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background-image: url('/src/me.jpg');
+  background-image: url('/src/me.jpeg');
   background-size: cover;  
   background-position: center;
 }

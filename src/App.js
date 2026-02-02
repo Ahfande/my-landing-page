@@ -11,7 +11,7 @@ import ParticlesBackground from './components/ParticlesBackground';
 
 
 function App() {
-  const cvUrl = "/CV-AhfanNaofal.pdf";
+  const cvUrl = "/AhfanNaofal.pdf";
   const whatsappNumber = "6281546864712";
   const emailAddress = "ahfande17@gmail.com";
 
@@ -19,7 +19,7 @@ function App() {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = "CV-AhfanNaofal.pdf";
+    link.download = "AhfanNaofal.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
