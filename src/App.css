@@ -286,31 +286,11 @@ p{
   border-radius: 16px;
   background-color: #7B4AE2;
   margin: 15px auto;
-  background-image: url('/public/SmartVenturi.png');
-  background-size: cover;  
-  background-position: center;
-}
-.ProjectImage2{
-  width: 90%;
-  height: 65%;
-  border-radius: 16px;
-  background-color: #7B4AE2;
-  margin: 15px auto;
-  background-image: url('/public/project2.jpg');
-  background-size: cover;  
-  background-position: center;
-}
-.ProjectImage3{
-  width: 90%;
-  height: 65%;
-  border-radius: 16px;
-  background-color: #7B4AE2;
-  margin: 15px auto;
   background-image: url('/public/project3.jpg');
   background-size: cover;  
 
 }
-.ProjectImage4{
+.ProjectImage2{
   width: 90%;
   height: 65%;
   border-radius: 16px;
@@ -319,7 +299,34 @@ p{
   background-image: url('/public/project4.jpg');
   background-size: cover;  
 }
+.ProjectImage3{
+  width: 90%;
+  height: 65%;
+  border-radius: 16px;
+  background-color: #7B4AE2;
+  margin: 15px auto;
+  background-image: url('/public/KotakSegitiga.png');
+  background-size: cover;  
+}
+.ProjectImage4{
+  width: 90%;
+  height: 65%;
+  border-radius: 16px;
+  background-color: #7B4AE2;
+  margin: 15px auto;
+  background-image: url('/public/LMS\(Siswa\).png');
+  background-size: cover;  
+}
 .ProjectImage5{
+  width: 90%;
+  height: 65%;
+  border-radius: 16px;
+  background-color: #7B4AE2;
+  margin: 15px auto;
+  background-image: url('/public/LMS\(guru\).png');
+  background-size: cover;  
+}
+.ProjectImage6{
   width: 90%;
   height: 65%;
   border-radius: 16px;
