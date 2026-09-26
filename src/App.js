@@ -88,6 +88,7 @@ function App() {
       KotakSegitiga: "https://kotak-segitiga.vercel.app/",
       "LMS(Siswa)": "https://lms-sman4-siswa.web.app",
       "LMS(Guru)": "https://lms-sman4-guru.web.app",
+      "klasifikasi": "https://web-production-3e7d.up.railway.app/",
       "UI/UX":
         "https://drive.google.com/drive/folders/1n_sjF6hybwsbVZEy2NZvALo0oJ964B9F?usp=sharing",
     };
@@ -291,6 +292,22 @@ function App() {
           {/* project 6 */}
           <div className="ProjectBox">
             <div className="ProjectImage6"></div>
+            <div className="ProjectInfo">
+              <h3 className="ProjectName">Website Klasifikasi Makanan Menampilkan Nilai Gizi TKPI</h3>
+              <div className="JobAndBtn">
+                <p className="JobProject">Website | Fullstack</p>
+                <button
+                  className="BtnPreview"
+                  onClick={() => handlePreviewClick("klasifikasi")}
+                >
+                  Preview
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* project 7 */}
+          <div className="ProjectBox">
+            <div className="ProjectImage7"></div>
             <div className="ProjectInfo">
               <h3 className="ProjectName">UI/UX</h3>
               <div className="JobAndBtn">
