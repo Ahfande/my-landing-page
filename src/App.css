@@ -139,7 +139,7 @@ section {
   height: 250px;
   border-radius: 50%;
   background-color: #7B4AE2;
-  background-image: url('/src/me1.jpg');
+  background-image: url('./me1.jpg');
   background-size: cover;  
   background-position: center;
   border: solid;
@@ -183,7 +183,7 @@ section {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background-image: url('/src/me.jpeg');
+  background-image: url('./me.jpeg');
   background-size: cover;  
   background-position: center;
 }
@@ -286,7 +286,7 @@ p{
   border-radius: 16px;
   background-color: #7B4AE2;
   margin: 15px auto;
-  background-image: url('/public/project3.jpg');
+  background-image: url('../public/project3.jpg');
   background-size: cover;  
 
 }
@@ -296,7 +296,7 @@ p{
   border-radius: 16px;
   background-color: #7B4AE2;
   margin: 15px auto;
-  background-image: url('/public/project4.jpg');
+  background-image: url('../public/project4.jpg');
   background-size: cover;  
 }
 .ProjectImage3{
@@ -305,7 +305,7 @@ p{
   border-radius: 16px;
   background-color: #7B4AE2;
   margin: 15px auto;
-  background-image: url('/public/KotakSegitiga.png');
+  background-image: url('../public/KotakSegitiga.png');
   background-size: cover;  
 }
 .ProjectImage4{
@@ -314,7 +314,7 @@ p{
   border-radius: 16px;
   background-color: #7B4AE2;
   margin: 15px auto;
-  background-image: url('/public/LMS\(Siswa\).png');
+  background-image: url('../public/LMS\(Siswa\).png');
   background-size: cover;  
 }
 .ProjectImage5{
@@ -323,7 +323,7 @@ p{
   border-radius: 16px;
   background-color: #7B4AE2;
   margin: 15px auto;
-  background-image: url('/public/LMS\(guru\).png');
+  background-image: url('../public/LMS\(guru\).png');
   background-size: cover;  
 }
 .ProjectImage6{
@@ -332,6 +332,22 @@ p{
   border-radius: 16px;
   background-color: #7B4AE2;
   margin: 15px auto;
+  background-image: url('../public/project6.jpg');
+  background-size: cover;  
+}
+.ProjectImage7{
+  width: 90%;
+  height: 65%;
+  border-radius: 16px;
+  background-color: #7B4AE2;
+  margin: 15px auto;
+  background-image: url('../public/project5.jpg');
+  background-size: cover;  
+}
+
+.ProjectName{
+  font-size: 15px;
+  color: #ffffff;
   background-image: url('/public/project6.jpg');
   background-size: cover;  
 }
