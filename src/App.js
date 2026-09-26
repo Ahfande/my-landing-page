@@ -11,7 +11,7 @@ import ParticlesBackground from "./components/ParticlesBackground";
 function App() {
   const cvUrl = "/AhfanNaofal.pdf";
   const whatsappNumber = "6281546864712";
-  const emailAddress = "ahfande17@gmail.com";
+  const emailAddress = "ahfannaofal6@gmail.com";
 
   // Fungsi untuk download CV
   const handleDownloadCV = () => {
