@@ -332,6 +332,15 @@ p{
   border-radius: 16px;
   background-color: #7B4AE2;
   margin: 15px auto;
+  background-image: url('/public/project6.png');
+  background-size: cover;  
+}
+.ProjectImage7{
+  width: 90%;
+  height: 65%;
+  border-radius: 16px;
+  background-color: #7B4AE2;
+  margin: 15px auto;
   background-image: url('/public/project5.jpg');
   background-size: cover;  
 }
